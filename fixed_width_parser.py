@@ -7,7 +7,7 @@ from faker import Faker
 
 class FixedWithFileParser:
     """
-
+    Convert CSV files to a variable column fixed width using specification
     """
     DELIMITER = ","
     QUOTECHAR = '"'
@@ -33,7 +33,9 @@ class FixedWithFileParser:
          
 
     def to_fixed(self, infile, outfile=None):
-
+        """
+        Convert csv file to fixed width
+        """
         with open(infile, 'r', encoding=self.delimited_encoding) as csv_file, \
             open(outfile, 'w', encoding=self.fixed_encoding) if outfile is not None else sys.stdout as fixed_file:
 
@@ -51,7 +53,9 @@ class FixedWithFileParser:
 
             
     def to_csv(self, infile, outfile=None):
-        
+        """
+        Convert fixed width to CSV
+        """
         with open(infile, 'r', encoding=self.fixed_encoding) as fixed_file, \
             open(outfile, 'w', newline='', encoding=self.delimited_encoding) if outfile is not None else sys.stdout as csv_file:
             
