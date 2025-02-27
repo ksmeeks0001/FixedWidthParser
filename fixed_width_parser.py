@@ -5,7 +5,7 @@ import csv
 from faker import Faker
 
 
-class FixedWithFileParser:
+class FixedWidthFileParser:
     """
     Convert CSV files to a variable column fixed width using specification
     """

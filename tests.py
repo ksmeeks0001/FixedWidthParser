@@ -1,14 +1,14 @@
 import unittest
 import csv
 
-from fixed_width_parser import FixedWithFileParser
+from fixed_width_parser import FixedWidthFileParser
 
 
 class FixedWidthTests(unittest.TestCase):
 
     def setUp(self):
         
-        self.parser = FixedWithFileParser("spec.json")
+        self.parser = FixedWidthFileParser("spec.json")
         
         self.fixed_file = "test_output/test_fixed.txt"
         self.csv_file = "test_output/test.csv"

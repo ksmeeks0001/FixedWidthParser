@@ -1,6 +1,6 @@
 import argparse
 
-from fixed_width_parser import FixedWithFileParser
+from fixed_width_parser import FixedWidthFileParser
 
 
 def parse_args():
@@ -22,7 +22,7 @@ def main():
     """
     conversion, infile, spec, outfile = parse_args()
 
-    parser = FixedWithFileParser(spec)
+    parser = FixedWidthFileParser(spec)
     
     if conversion == 'csv':
         parser.to_csv(infile, outfile)
